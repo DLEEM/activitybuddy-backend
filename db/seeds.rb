@@ -5,3 +5,33 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+user1 = User.create!(
+  {email: 'mesun@gmail.com',
+  password: '123456',
+  password_confirmation: '123456'}
+)
+
+user2 = User.create!(
+  {email: 'mesun1@gmail.com',
+  password: '123456',
+  password_confirmation: '123456'}
+)
+
+activity1 = Activity.create!({
+  name: 'hiking'
+})
+
+activity2 = Activity.create!({
+  name: 'bowling'
+})
+
+activity3 = Activity.create!({
+  name: 'swimming'
+})
+
+UserActivity.create!({
+  user_id: user1.id,
+  activity_id: activity1.id
+})
+# user1.activities << activity1

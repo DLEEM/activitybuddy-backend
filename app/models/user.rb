@@ -7,4 +7,7 @@ class User < ApplicationRecord
            :validatable,
            :jwt_authenticatable,
            jwt_revocation_strategy: self
+
+  has_many :user_activities, dependent: :destroy
+  has_many :activities, through: :user_activities
 end
