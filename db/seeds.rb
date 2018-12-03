@@ -9,13 +9,24 @@
 user1 = User.create!(
   {email: 'mesun@gmail.com',
   password: '123456',
-  password_confirmation: '123456'}
+  password_confirmation: '123456',
+  address1: '704 J St.',
+  city: 'San Diego',
+  state: 'California',
+  zipcode: '92101'
+
+}
 )
 
 user2 = User.create!(
   {email: 'mesun1@gmail.com',
   password: '123456',
-  password_confirmation: '123456'}
+  password_confirmation: '123456',
+  address1: '289 6th Ave',
+  city: 'San Diego',
+  state: 'California',
+  zipcode: '92101'
+  }
 )
 
 activity1 = Activity.create!({
