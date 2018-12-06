@@ -9,6 +9,7 @@ class ActivitiesController < ActionController::API
 
   # get single activity (/activities/id)
   def show
+    render json: @activity
   end
 
 
