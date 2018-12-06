@@ -12,6 +12,11 @@ class ActivitiesController < ActionController::API
     render json: @activity
   end
 
+  def create
+    activity = Activity.create(activity_params)
+    render json: activity
+  end
+
 
   private
 
