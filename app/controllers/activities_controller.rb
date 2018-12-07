@@ -26,6 +26,11 @@ class ActivitiesController < ActionController::API
     @activity.update_attributes(activity_params)
   end
 
+  def destroy
+    @activity.delete
+    render json: @activity.id, status: :accepted    
+  end
+
 
   private
 
