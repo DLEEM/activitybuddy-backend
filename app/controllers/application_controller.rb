@@ -8,7 +8,7 @@ class ApplicationController < ActionController::API
   # If you have extra params to permit, append them to the sanitizer.
   def configure_permitted_parameters
     devise_parameter_sanitizer.permit(:sign_up) do |user|
-      user.permit(:email, :password, :password_confirmation, :address1, :city, :state, :zipcode)
+      user.permit(:email, :password, :password_confirmation, :address1, :city, :state, :zipcode, :moderator)
     end
   end
 
