@@ -40,20 +40,15 @@ user3 = User.create!(
   }
 )
 
-activity1 = Activity.create!({
-  name: 'hiking'
-})
-
-activity2 = Activity.create!({
-  name: 'bowling'
-})
-
-activity3 = Activity.create!({
-  name: 'swimming'
-})
+activities = Activity.create([
+  { name: 'Hiking' },
+  { name: 'Swimming' },
+  { name: 'Cooking' },
+  { name: 'Coding' }
+])
 
 UserActivity.create!({
   user_id: user1.id,
   activity_id: activity1.id
 })
-user1.activities << activity1
+# user1.activities << activity1
