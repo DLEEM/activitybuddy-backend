@@ -13,8 +13,17 @@ class ActivitiesController < ActionController::API
   end
 
   def create
-    activity = Activity.create(activity_params)
-    render json: activity
+    @activity = Activity.new(activity_params)
+    if @activity.valid?
+      @activity.save
+      render json: @activity, status: :created
+    else
+      render json: @activities.errors, status: :unprocessable_entity
+    end
+  end
+
+  def update
+    @activity.update_attributes(activity_params)
   end
 
 
