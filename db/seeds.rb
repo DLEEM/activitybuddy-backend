@@ -14,8 +14,7 @@ user1 = User.create!(
   city: 'San Diego',
   state: 'California',
   zipcode: '92101'
-
-}
+  }
 )
 
 user2 = User.create!(
@@ -26,6 +25,18 @@ user2 = User.create!(
   city: 'San Diego',
   state: 'California',
   zipcode: '92101'
+  }
+)
+
+user3 = User.create!(
+  {email: 'moderator@peapod.com',
+  password: '123456',
+  password_confirmation: '123456',
+  address1: '6969 Cool St.',
+  city: 'Weedsport',
+  state: 'New Jersey',
+  zipcode: '420666',
+  moderator: true
   }
 )
 
@@ -45,4 +56,4 @@ UserActivity.create!({
   user_id: user1.id,
   activity_id: activity1.id
 })
-# user1.activities << activity1
+user1.activities << activity1
