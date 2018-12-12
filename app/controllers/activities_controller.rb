@@ -14,7 +14,6 @@ class ActivitiesController < ApplicationController
   end
 
   def create
-    # byebug
     @activity = Activity.new(activity_params)
     if @activity.valid?
       @activity.save
