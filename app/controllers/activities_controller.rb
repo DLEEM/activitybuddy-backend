@@ -1,4 +1,5 @@
-class ActivitiesController < ActionController::API
+class ActivitiesController < ApplicationController
+  before_action :authenticate_user!, except: [:index]
   before_action :set_activity, only: [:show, :update, :destroy]
 
   # get activities index (/activities)
@@ -13,6 +14,7 @@ class ActivitiesController < ActionController::API
   end
 
   def create
+    # byebug
     @activity = Activity.new(activity_params)
     if @activity.valid?
       @activity.save
@@ -28,7 +30,7 @@ class ActivitiesController < ActionController::API
 
   def destroy
     @activity.delete
-    render json: @activity.id, status: :accepted    
+    render json: @activity.id, status: :accepted
   end
 
 
