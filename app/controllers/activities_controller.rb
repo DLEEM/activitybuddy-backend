@@ -32,6 +32,11 @@ class ActivitiesController < ApplicationController
     render json: @activity.id, status: :accepted
   end
 
+  def show_activity_users
+    @activity = Activity.find(params[:activity_id])
+    @activity_users = @activity.users
+    render json: @activity_users
+  end
 
   private
 

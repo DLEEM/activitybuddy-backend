@@ -41,6 +41,10 @@ user3 = User.create!(
 )
 
 activity1 = Activity.create({ name: 'Hiking' })
+activity2 = Activity.create({ name: 'Swimming' })
+activity3 = Activity.create({ name: 'Cooking' })
+activity4 = Activity.create({ name: 'Coding' })
+activity5 = Activity.create({ name: 'Surfing' })
 
 # activities = Activity.create([
 #   { name: 'Hiking' },
@@ -54,3 +58,10 @@ activity1 = Activity.create({ name: 'Hiking' })
 #   activity_id: activity1.id
 # })
 user1.activities << activity1
+user1.activities << activity2
+user1.activities << activity3
+user2.activities << activity4
+user2.activities << activity5
+user3.activities << activity1
+user3.activities << activity2
+user3.activities << activity3
