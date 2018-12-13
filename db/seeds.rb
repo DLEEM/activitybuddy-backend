@@ -41,6 +41,10 @@ user3 = User.create!(
 )
 
 activity1 = Activity.create({ name: 'Hiking' })
+activity2 = Activity.create({ name: 'Swimming' })
+activity3 = Activity.create({ name: 'Cooking' })
+activity4 = Activity.create({ name: 'Coding' })
+activity5 = Activity.create({ name: 'Surfing' })
 
 # activities = Activity.create([
 #   { name: 'Hiking' },
