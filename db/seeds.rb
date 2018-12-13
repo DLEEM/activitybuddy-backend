@@ -58,3 +58,10 @@ activity5 = Activity.create({ name: 'Surfing' })
 #   activity_id: activity1.id
 # })
 user1.activities << activity1
+user1.activities << activity2
+user1.activities << activity3
+user2.activities << activity4
+user2.activities << activity5
+user3.activities << activity1
+user3.activities << activity2
+user3.activities << activity3
