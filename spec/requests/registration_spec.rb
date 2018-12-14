@@ -8,7 +8,11 @@ RSpec.describe "Users", type: :request do
         user: {
           email: 'jill@jiller.com',
           password: 'secret',
-          password_confirmation: 'secret'
+          password_confirmation: 'secret',
+          address1: '123 street',
+          city: 'San Diego',
+          state: "CA",
+          zipcode: 12345
         }
       }
 
@@ -21,8 +25,7 @@ RSpec.describe "Users", type: :request do
       payload = {
         user: {
           email: 'jill@jiller.com',
-          password: 'secret',
-          password_confirmation: 'wrong password'
+          password: 'secret'
         }
       }
 
