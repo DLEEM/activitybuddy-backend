@@ -7,17 +7,20 @@ RSpec.describe Activity, type: :model do
   end
 
   it "saves new activity" do
-    expect{Activity.new}.to_not raise_error
-    expect{Activity.new({ name: 'Hiking' })}.to_not raise_error
     activity = Activity.new({ name: 'Hiking' })
     expect(activity.name).to eq('Hiking')
+    expect(activity).to be_valid
   end
 
-  it "deletes activity" do
-    expect{Activity.new}.to_not raise_error
-    activity = Activity.new({ name: 'Hiking' })
-    activity.delete
-    expect(activity.name).to_not eq('Hiking')
+  it "is not valid without a name" do
+    activity = Activity.new(name: nil)
+    expect(activity).to_not be_valid
   end
+
+  it "deletes user activity" do
+    activity = UserActivity.new(user_id: 1)
+    expect(activity.delete).to eq(nil)
+  end
+
 
 end

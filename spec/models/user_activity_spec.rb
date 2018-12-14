@@ -10,4 +10,5 @@ RSpec.describe UserActivity, type: :model do
     expect{Activity.new}.to_not raise_error
     expect(Activity.new).to be_a Activity
   end
+
 end

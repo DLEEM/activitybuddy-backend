@@ -14,7 +14,6 @@ RSpec.describe "Users", type: :request do
       }
 
       post user_session_path, params: payload
-      byebug
       expect(response).to have_http_status(201)
       expect(response.headers["Authorization"]).to_not be_blank
     end
