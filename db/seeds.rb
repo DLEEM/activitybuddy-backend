@@ -4,10 +4,10 @@ user1 = User.create!(
     email: 'moderator@peapod.com',
     password: '123456',
     password_confirmation: '123456',
-    address1: '6969 Cool St.',
-    city: 'Weedsport',
-    state: 'New Jersey',
-    zipcode: '420666',
+    address1: '704 J St.',
+    city: 'San Diego',
+    state: 'California',
+    zipcode: '92101',
     moderator: true
   }
 )
