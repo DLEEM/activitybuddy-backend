@@ -15,8 +15,14 @@ class User < ApplicationRecord
   has_many :user_activities, dependent: :destroy
   has_many :activities, through: :user_activities
 
-  def geolocate!
-      #todo
+  def display_address(user)
+    if (user.address1 == '' && user.city == '')
+      return user.email
+    elsif (user.address1 && user.city == '')
+      return user.address1
+    elsif (user.address1 && user.city)
+      return "#{user.address1}, #{user.city}"
+    end
   end
 
 end
