@@ -19,6 +19,7 @@ Rails.application.config.middleware.insert_before 0, Rack::Cors do
   allow do
     origins '*' # <- We change this to allow requests from anyone
 
+
     resource '*',
       headers: :any,
       expose: :authorization, # <- Add this line to expose our auth header
